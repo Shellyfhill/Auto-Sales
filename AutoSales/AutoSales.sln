@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSales", "AutoSales\AutoSales.csproj", "{87173279-9CFB-49D5-A372-AA83EA655DD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87173279-9CFB-49D5-A372-AA83EA655DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87173279-9CFB-49D5-A372-AA83EA655DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87173279-9CFB-49D5-A372-AA83EA655DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87173279-9CFB-49D5-A372-AA83EA655DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96FD1AA3-A687-4AC6-AC15-763BD73FDF7D}
+	EndGlobalSection
+EndGlobal
