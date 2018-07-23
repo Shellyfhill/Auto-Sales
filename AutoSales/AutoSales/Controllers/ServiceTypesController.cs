@@ -30,6 +30,7 @@ namespace AutoSales.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ServiceType serviceType)
         {
             if(ModelState.IsValid)
