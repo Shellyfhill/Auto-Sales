@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoSales.Data;
+using AutoSales.Models;
 using AutoSales.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,6 +33,31 @@ namespace AutoSales.Controllers
                 UserObj = _db.Users.FirstOrDefault(u => u.Id == userId)
             };
             return View(model);
+        }
+
+        //Create GET
+        public IActionResult Create(string userId)
+        {
+            Car carObj = new Car
+            {
+                Year = DateTime.Now.Year,
+                UserId = userId
+            };
+            return View(carObj);
+        }
+
+        //Create POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Car car)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Add(car);
+                await _db.SaveChangesAsync();
+                return RedirectToAction(nameof(Index), new { userId = car.UserId });
+            }
+            return View(car);
         }
 
         protected override void Dispose(bool disposing)
