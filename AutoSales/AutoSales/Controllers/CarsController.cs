@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using AutoSales.Data;
 using AutoSales.Models;
 using AutoSales.Models.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AutoSales.Controllers
 {
+    [Authorize]
     public class CarsController : Controller
     {
         private readonly ApplicationDbContext _db;
